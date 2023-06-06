@@ -1,8 +1,6 @@
-var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
-var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
 var __export = (target, all) => {
   for (var name in all)
@@ -16,27 +14,14 @@ var __copyProps = (to, from, except, desc) => {
   }
   return to;
 };
-var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
-  // If the importer is in node compatibility mode or this is not an ESM
-  // file that has been converted to a CommonJS file using a Babel-
-  // compatible transform (i.e. "__esModule" has not been set), then set
-  // "default" to the CommonJS "module.exports" for node compatibility.
-  isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
-  mod
-));
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
-// src/app.ts
-var app_exports = {};
-__export(app_exports, {
-  default: () => app_default
-});
-module.exports = __toCommonJS(app_exports);
-var import_express2 = __toESM(require("express"));
-var import_express_async_errors2 = require("express-async-errors");
-var import_cors = __toESM(require("cors"));
-
 // src/router/index.ts
+var router_exports = {};
+__export(router_exports, {
+  default: () => router_default
+});
+module.exports = __toCommonJS(router_exports);
 var import_express = require("express");
 var import_express_async_errors = require("express-async-errors");
 
@@ -56,10 +41,3 @@ router.get("/health", (req, res) => {
 });
 router.use(handleError);
 var router_default = router;
-
-// src/app.ts
-var server = (0, import_express2.default)();
-server.use((0, import_cors.default)());
-server.use(import_express2.default.json());
-server.use(router_default);
-var app_default = server;
