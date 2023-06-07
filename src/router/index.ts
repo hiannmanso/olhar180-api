@@ -7,7 +7,7 @@ import authRouter from './auth.router'
 const router = Router()
 router.use(taskRouter)
 router.use(authRouter)
-router.get("/health", (req, res) => {    
+router.get("/teste", (req, res) => {    
     res.send("OK")})
 router.use(handleError)
 

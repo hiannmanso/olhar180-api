@@ -8,7 +8,4 @@ server.use(cors())
 server.use(express.json())
 server.use(router)
 
-
-
-
 export default server
