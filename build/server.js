@@ -461,4 +461,5 @@ var app_default = server;
 import_dotenv2.default.config();
 app_default.listen(process.env.PORT || 5e3, () => {
   console.log(`Backend up on PORT:${process.env.PORT}`);
+  console.log(`${process.env.DATABASE_URL}`);
 });
