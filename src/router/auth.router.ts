@@ -8,7 +8,6 @@ import { signUpSchema } from '../schemas/signup.schema'
 import { signInSchema } from '../schemas/signin.schema'
 
 const authRouter = Router()
-
 authRouter.post('/signup', validateSchema(signUpSchema), signUpPOST)
 authRouter.post('/signin', signInGET)
 

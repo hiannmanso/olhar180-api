@@ -6,7 +6,7 @@ export function handleError(
 	res: Response,
 	next: NextFunction
 ) {
-	console.log(error)
+	console.table(error)
 	if (error) {
 		return res.status(error.status).send(error.message)
 	}

@@ -1,14 +1,10 @@
-import { Router } from 'express'
 import 'express-async-errors'
-import { handleError } from '../middlewares/handleError'
+import { Router } from 'express'
 import taskRouter from './task.router'
-import authRouter from './auth.router'
-
+import authRouter from './auth.router' 
+import {handleError} from '../middlewares/handleError'
 const router = Router()
-router.use(taskRouter)
 router.use(authRouter)
-router.get("/teste", (req, res) => {    
-    res.send("OK")})
+router.use("/tasks", taskRouter)
 router.use(handleError)
-
-export default router
+export {router}

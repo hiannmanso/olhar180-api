@@ -4,10 +4,10 @@ import { validateSchema } from "../middlewares/validateSchema";
 import {taskSchema} from '../schemas/task.schema'
 
 const taskRouter = Router()
-taskRouter.post('/tasks',validateSchema(taskSchema), tasksPOST)
-taskRouter.get('/tasks',tasksGET)
-taskRouter.get('/tasks/:id',tasksSingleGET)
-taskRouter.put('/tasks/:id',validateSchema(taskSchema), tasksPUT)
-taskRouter.put('/tasks/status/:id',taskStatusPUT)
-taskRouter.delete('/tasks/:id',tasksDELETE)
+taskRouter.post('',validateSchema(taskSchema), tasksPOST)
+taskRouter.get('',tasksGET)
+taskRouter.get('/:id',tasksSingleGET)
+taskRouter.put('/:id',validateSchema(taskSchema), tasksPUT)
+taskRouter.put('/status/:id',taskStatusPUT)
+taskRouter.delete('/:id',tasksDELETE)
 export default taskRouter
