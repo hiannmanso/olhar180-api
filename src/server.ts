@@ -1,6 +1,6 @@
 import dotenv from 'dotenv'
 
-import server from './app.js'
+import server from './app'
 
 dotenv.config()
 
